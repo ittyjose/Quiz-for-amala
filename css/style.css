@@ -11,42 +11,45 @@
 
 }
 
+
 #certificate{
   padding-left:150px; 
    background-image: url("../images/border.jpg");
    background-repeat: no-repeat;
    background-position: center center;
    background-attachment: fixed;
-   background-size: 1300px 700px;
-   top:650px;
-   position: relative;
+   background-size: 1200px 730px;
+   top:0px;
+   position: fixed;
    z-index: 1;
 }
 #home {
    float: right;
-   top:600px;
+   top:300px;
   margin: 8px 50px 0px 8px;
   padding: 4px 8px;
-  background: #9ACFCC;
+  background: #f44336;
   color: #00403C;
   font-size: 20px;
   cursor: pointer;
   outline: none;
   position: relative;
   z-index: 3;
+  display: none;
 }
 #print {
   float: right;
-  top:600px;
+  top:300px;
   margin: 8px 10px 0px 8px;
   padding: 4px 8px;
-  background: #9ACFCC;
+  background: #f44336;
   color: #00403C;
   font-size: 20px;
   cursor: pointer;
   outline: none;
   position: relative;
   z-index: 3;
+  display: none;
 }
 
 @media print {
@@ -61,7 +64,7 @@
    background-repeat: no-repeat;
    background-position: center center;
    background-attachment: fixed;
-   background-size: 1200px 800px;
+   background-size: 1200px 730px;
    top:0px;
    position: fixed;
    z-index: 1;
@@ -69,9 +72,15 @@
    @page {size: landscape;
    }
    body{ 
-   top:-700px;
+   top:0px;
    position: fixed;
    right:200px;
+   }
+   #home{
+   	display: none;
+   }
+   #print{
+   	display: none;
    }
 
   
@@ -105,21 +114,13 @@ html, body {
   height: 100%;
 }
 
-html {
-  display: table;
-}
-
-body {
-  display: table-cell;
-  vertical-align: middle;
-}
 
 #quiz {
   margin: -44px 50px 0px;
-  position: relative;
+  position: fixed;
   width: calc(100% - 100px);
   z-index: 1;
-  top:500px;
+  top:200px;
   opacity: 0.8;
 
 }
@@ -205,11 +206,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 44px;
+  top: 30px;
   left: 0px;
   background: #FAFAFA;
   width: 100%;
-  height: calc(100% - 44px);
+  height: calc(100% - 50px);
+  display: none;
 }
 
 #quiz-results-message {
@@ -217,16 +219,19 @@ body {
   color: #00403C;
   font-size: 20px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 #quiz-results-score {
   display: block;
   color: #31706c;
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 #quiz-results-score b {
   color: #00403C;
   font-weight: 600;
   font-size: 20px;
+  text-transform: uppercase;
 }
